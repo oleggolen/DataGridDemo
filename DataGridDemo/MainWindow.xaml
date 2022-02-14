@@ -1,0 +1,41 @@
+﻿<Window x:Class="DataGridDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataGridDemo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" x:Name="Window">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="*"/>
+            <RowDefinition  Height="10*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Button x:Name="Create" Content="Добавить" Grid.Row="0" Grid.Column="0" />
+        <Button x:Name="Update" Grid.Row="0" Grid.Column="1" Content="Реадктировать" Click="Update_OnClick"/>
+        <Button x:Name="Delete" Grid.Row="0" Grid.Column="2" Content="Удалить"></Button>
+
+        <DataGrid ItemsSource="{Binding ElementName=Window, Path=Houses}" AutoGenerateColumns="False"
+                  CanUserAddRows="False"
+                  CanUserDeleteRows="False" CanUserResizeColumns="False" 
+                  CanUserSortColumns="False"
+                  CanUserReorderColumns="False"
+                  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" SelectedItem="{Binding ElementName=Window, Path=SelectedHouse, Mode=TwoWay}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Адрес" Width="3*" Binding="{Binding Path=Address}" IsReadOnly="True" />
+                <DataGridTextColumn Header="Количество этажей" Width="*" Binding="{Binding Floors}" IsReadOnly="True" />
+                <DataGridTextColumn Header="Количество подъездов" Width="*" Binding="{Binding Entrances}"
+                                    IsReadOnly="True" />
+                <DataGridCheckBoxColumn Header="Наличие лифта" Width="*" Binding="{Binding HasLift}" IsReadOnly="True" />
+            </DataGrid.Columns>
+
+
+        </DataGrid>
+    </Grid>
+
+</Window>

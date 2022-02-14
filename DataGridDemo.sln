@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGridDemo", "DataGridDemo\DataGridDemo.csproj", "{F200A9A6-849F-4E5F-A42B-24381B405364}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F200A9A6-849F-4E5F-A42B-24381B405364}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F200A9A6-849F-4E5F-A42B-24381B405364}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F200A9A6-849F-4E5F-A42B-24381B405364}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F200A9A6-849F-4E5F-A42B-24381B405364}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
